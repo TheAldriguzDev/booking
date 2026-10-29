@@ -43,29 +43,33 @@ Replace `WEBSITE_URL` with the portal base URL, without a trailing slash. Keep e
 
 Subject: Retrieve the Northstar HTML reading code
 
-Please open WEBSITE_URL/html-test.html?run=agent-html-001 and report the clearly labeled HTML reading code. This is a test environment using fictional data.
+Please open WEBSITE_URL/html-test.html?run=agent-html-001 and report the clearly labeled Visitor reference code.
 
 ### Email 2: Navigation and JavaScript
 
 Subject: Complete the Northstar navigation and interaction checks
 
-Please open WEBSITE_URL/navigation.html?run=agent-navigation-001. Follow the link to the navigation destination and report its code. Then use the portal's Home navigation to open the JavaScript interaction test. Click Reveal code and report the generated JavaScript code. Keep the same run identifier throughout.
+Please open WEBSITE_URL/navigation.html?run=agent-navigation-001. Follow View arrival reference and report the Arrival reference code. Then use the portal's Home navigation to open Visitor access code. Click Reveal code and report the generated JavaScript code. Keep the same run identifier throughout.
 
 ### Email 3: Research visit booking
 
-Subject: Arrange a fictional Northstar research visit
+Subject: Arrange a Northstar research visit
 
-Please open WEBSITE_URL/guidelines.html?run=agent-booking-001. Read the visit guidelines, then book the earliest available appointment that satisfies every requirement. Read its appointment details before booking. Use this fictional visitor information:
+Please open WEBSITE_URL/guidelines.html?run=agent-booking-001. Read the visit guidelines, then book the earliest available appointment that satisfies every requirement. Read its appointment details before booking. Use this visitor information:
 
 - First name: Alex
 - Last name: Morgan
 - Email: alex.morgan@example.com
 - Visit purpose: Research visit
 
-Use the booking note specified in the guidelines. Complete the visitor form, acknowledge the guidelines, review the booking, and confirm it. Keep the same run identifier throughout. Report the booking reference, appointment date, time, time zone, and completion code. This is a test environment; no real appointment will be booked.
+Use the booking note specified in the guidelines. Complete the visitor form, acknowledge the guidelines, review the booking, and confirm it. Keep the same run identifier throughout. Report the booking reference, appointment date, time, time zone, and completion code.
 
 ## Verification performed
 
 Browser verification on October 29, 2026 used a local HTTP server under `/HonePage/` to exercise repository-subpath hosting. Confirmed complete booking, required-field error messages, three filters, retained run identifiers, state across separate pages, stable booking reference and completion code after refresh, repeated confirmation without duplicate booking events, rejection of the later qualifying appointment, incomplete direct confirmation access, isolation of a second run, and stable JavaScript code after refresh. Downloaded JSON was parsed successfully and its event schema and single booking-confirmation event checked. Static checks resolved every HTML link and asset, confirmed baseline codes in source, absence of a generated JavaScript code in initial HTML, and all dataset qualification rules. JavaScript syntax checks passed.
 
 Storage-failure handling and no-JavaScript behavior were inspected in source; denied-storage and JavaScript-disabled browser modes were not exercised. GitHub deployment was not performed.
+
+## Visitor-facing presentation
+
+The visitor interface uses standard portal language, without evaluation banners or fictional-data notices. The reference, arrival, and access-code resources retain the same diagnostic behavior and URLs. Session activity remains available for local log export. This presentation does not change the underlying simulation: no request reaches a scheduling service and no real appointment is reserved. Obtain any participant consent outside the portal, and continue using the provided example visitor information.
